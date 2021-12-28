@@ -16,7 +16,7 @@ public class Projet implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long projet_id;
+	private int projet_id;
 	private long projet_developper_id;
 	private long projet_tester_id;
 	private String projet_name;
@@ -28,7 +28,7 @@ public class Projet implements Serializable {
 		return projet_id;
 	}
 
-	public void setProjet_id(long projet_id) {
+	public void setProjet_id(int projet_id) {
 		this.projet_id = projet_id;
 	}
 

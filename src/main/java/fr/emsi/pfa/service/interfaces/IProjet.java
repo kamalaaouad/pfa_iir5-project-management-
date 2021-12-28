@@ -2,13 +2,16 @@ package fr.emsi.pfa.service.interfaces;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.ResponseEntity;
 
 import fr.emsi.pfa.entities.Projet;
+import org.springframework.stereotype.Repository;
 
-public interface IProjet {
+@Repository
+public interface IProjet extends JpaRepository<Projet, Integer> {
 
-	ResponseEntity<Projet> addProjet(Projet p);
+/*	ResponseEntity<Projet> addProjet(Projet p);
 
 	ResponseEntity<Projet> updateProjet(Projet p);
 
@@ -16,5 +19,5 @@ public interface IProjet {
 
 	List<Projet> findAllProjets();
 
-	Projet searchById(long id);
+	Projet searchById(long id);*/
 }
