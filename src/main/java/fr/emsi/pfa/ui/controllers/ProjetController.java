@@ -30,7 +30,7 @@ public class ProjetController {
     }
 
     @GetMapping("{id}")
-    public Projet findById(@RequestBody int projet_id) {
+    public Projet findById(@RequestParam int projet_id) {
         return ps.findById(projet_id);
     }
 
