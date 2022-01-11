@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import fr.emsi.pfa.entities.Projet;
 
 @EnableJpaRepositories
-public interface ProjetRepository extends JpaRepository<Projet, Long> {
+public interface ProjetRepository extends JpaRepository<Projet, Integer> {
 
 }

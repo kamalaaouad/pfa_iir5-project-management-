@@ -41,8 +41,8 @@ public class ProjetService{
 	}
 
 
-	public Projet findById(int id) {
-		return iapp.findById(id).get();
+	public Projet findById(int projet_id) {
+		return iapp.findById(projet_id).get();
 	}
 
 
@@ -54,7 +54,7 @@ public class ProjetService{
 		return iapp.findAll();
 	}
 
-	public void deleteById(int id) {
-		iapp.deleteById(id);
+	public void deleteById(int projet_id) {
+		iapp.deleteById(projet_id);
 	}
 }

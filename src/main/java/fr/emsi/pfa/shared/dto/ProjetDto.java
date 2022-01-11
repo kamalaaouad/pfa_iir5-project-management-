@@ -8,7 +8,7 @@ public class ProjetDto implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private long projet_id;
+	private int projet_id;
 	private long projet_developper_id;
 	private long projet_tester_id;
 	private String projet_name;
@@ -16,11 +16,11 @@ public class ProjetDto implements Serializable {
 	private String projet_type;
 	private boolean etat_projet;
 
-	public long getProjet_id() {
+	public int getProjet_id() {
 		return projet_id;
 	}
 
-	public void setProjet_id(long projet_id) {
+	public void setProjet_id(int projet_id) {
 		this.projet_id = projet_id;
 	}
 

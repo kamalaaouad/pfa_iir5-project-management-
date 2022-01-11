@@ -17,14 +17,14 @@ public class Projet implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int projet_id;
-	private long projet_developper_id;
+	private long projetdevelopperid;
 	private long projet_tester_id;
 	private String projet_name;
 	private String projet_description;
 	private String projet_type;
 	private boolean etat_projet;
 
-	public long getProjet_id() {
+	public int getProjet_id() {
 		return projet_id;
 	}
 
@@ -33,11 +33,11 @@ public class Projet implements Serializable {
 	}
 
 	public long getProjet_developper_id() {
-		return projet_developper_id;
+		return projetdevelopperid;
 	}
 
 	public void setProjet_developper_id(long projet_developper_id) {
-		this.projet_developper_id = projet_developper_id;
+		this.projetdevelopperid = projet_developper_id;
 	}
 
 	public long getProjet_tester_id() {
@@ -80,4 +80,16 @@ public class Projet implements Serializable {
 		this.etat_projet = etat_projet;
 	}
 
+	@Override
+	public String toString() {
+		return "Projet{" +
+				"projet_id=" + projet_id +
+				", projet_developper_id=" + projetdevelopperid +
+				", projet_tester_id=" + projet_tester_id +
+				", projet_name='" + projet_name + '\'' +
+				", projet_description='" + projet_description + '\'' +
+				", projet_type='" + projet_type + '\'' +
+				", etat_projet=" + etat_projet +
+				'}';
+	}
 }
