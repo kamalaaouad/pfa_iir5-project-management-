@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/Api/gestionProjet")
+@RequestMapping("/api/")
 public class ProjetController {
 
     @Autowired
@@ -25,22 +25,22 @@ public class ProjetController {
         this.ps.update(pj);
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public Projet findById(int id) {
         return ps.findById(id);
     }
 
-    @DeleteMapping("/deleteAll/")
+    @DeleteMapping("/")
     public void deleteAll() {
         ps.deleteAll();
     }
 
-    @GetMapping("/findAll/")
+    @GetMapping("/")
     public List<Projet> findAll() {
         return ps.findAll();
     }
 
-    @DeleteMapping("/deleteId/{id}")
+    @DeleteMapping("/{id}")
     public void deleteById(@PathVariable int id) {
         ps.deleteById(id);
     }
